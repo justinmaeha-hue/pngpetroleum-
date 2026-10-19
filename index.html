@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,241 +9,160 @@
 
 <style>
 :root {
-  --green: #073b2a;
-  --green2: #08784d;
-  --gold: #f4c542;
-  --bg: #f3f6f4;
-  --white: #ffffff;
-  --text: #18241e;
-  --muted: #718078;
-  --border: #e3eae5;
+  --green:#073b2a;
+  --green2:#08784d;
+  --gold:#f4c542;
+  --bg:#f3f6f4;
+  --white:#fff;
+  --text:#18241e;
+  --muted:#718078;
+  --border:#e3eae5;
 }
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);color:var(--text)
 }
-button, input { font: inherit; }
-button { cursor: pointer; }
-.hidden { display: none !important; }
-.app {
-  max-width: 480px;
-  min-height: 100vh;
-  margin: auto;
-  background: var(--bg);
-  padding-bottom: 82px;
+button,input{font:inherit}
+button{cursor:pointer}
+.hidden{display:none!important}
+.app{
+  max-width:480px;min-height:100vh;margin:auto;
+  background:var(--bg);padding-bottom:85px
 }
-.header {
-  background: linear-gradient(135deg, #052e20, #08784d);
-  color: white;
-  padding: 22px 18px 25px;
-  border-radius: 0 0 22px 22px;
+.header{
+  background:linear-gradient(135deg,#052e20,#08784d);
+  color:white;padding:22px 18px 25px;
+  border-radius:0 0 22px 22px
 }
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 11px;
+.brand{display:flex;align-items:center;gap:11px}
+.logo{
+  width:46px;height:46px;border-radius:14px;
+  background:var(--gold);color:var(--green);
+  display:grid;place-items:center;font-size:22px;font-weight:900
 }
-.logo {
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  background: var(--gold);
-  color: var(--green);
-  display: grid;
-  place-items: center;
-  font-size: 22px;
-  font-weight: 900;
+.brand h1{margin:0;font-size:18px}
+.brand p{margin:5px 0 0;font-size:11px;opacity:.8}
+.header-row{
+  display:flex;justify-content:space-between;
+  align-items:center;margin-top:24px
 }
-.brand h1 { margin: 0; font-size: 19px; }
-.brand p { margin: 5px 0 0; font-size: 11px; opacity: .8; }
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
+.header-row small{opacity:.8}
+.header-row h2{margin:7px 0 0;font-size:25px}
+.tag{
+  background:#ffffff20;padding:9px 11px;
+  border-radius:20px;font-size:11px
 }
-.header-row small { opacity: .8; }
-.header-row h2 { margin: 7px 0 0; font-size: 26px; }
-.tag {
-  background: #ffffff20;
-  padding: 9px 11px;
-  border-radius: 20px;
-  font-size: 11px;
+.content{padding:16px}
+.section-title{
+  display:flex;justify-content:space-between;
+  align-items:center;margin:19px 0 12px
 }
-.content { padding: 16px; }
-.notice {
-  background: #fff8df;
-  border: 1px solid #f2dfa0;
-  color: #685317;
-  border-radius: 12px;
-  padding: 12px;
-  font-size: 12px;
-  line-height: 1.5;
-  margin-bottom: 16px;
+.section-title h3{margin:0;font-size:17px}
+.section-title span{font-size:12px;color:var(--muted)}
+.grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px
 }
-.section-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 19px 0 12px;
+.card{
+  background:white;border:1px solid var(--border);
+  border-radius:16px;padding:13px;
+  box-shadow:0 3px 12px #12331c08
 }
-.section-title h3 { margin: 0; font-size: 17px; }
-.section-title span { font-size: 12px; color: var(--muted); }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+.product-icon{
+  height:82px;border-radius:12px;
+  background:linear-gradient(135deg,#e3f3e8,#f9f5df);
+  display:grid;place-items:center;font-size:40px;margin-bottom:12px
 }
-.card {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 14px;
-  box-shadow: 0 3px 12px #12331c08;
+.card h4{margin:0 0 7px;font-size:14px}
+.muted{color:var(--muted);font-size:11px}
+.price{font-size:19px;font-weight:800;margin:12px 0 5px}
+.earn{font-size:12px;color:var(--green2);font-weight:700}
+.duration{margin-top:6px;font-size:11px;color:var(--muted)}
+.primary,.secondary,.danger{
+  border:0;border-radius:10px;padding:12px;
+  font-weight:700;width:100%
 }
-.product-icon {
-  height: 85px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #e3f3e8, #f9f5df);
-  display: grid;
-  place-items: center;
-  font-size: 42px;
-  margin-bottom: 12px;
+.primary{background:var(--green2);color:white}
+.secondary{background:#e6f2e9;color:var(--green)}
+.danger{background:#fff0ed;color:#a93220}
+.card .primary{margin-top:13px;padding:10px 5px;font-size:12px}
+.panel{
+  background:white;border:1px solid var(--border);
+  border-radius:16px;padding:16px;margin-bottom:14px
 }
-.card h4 { margin: 0 0 7px; font-size: 14px; }
-.muted { color: var(--muted); font-size: 11px; }
-.price { font-size: 19px; font-weight: 800; margin: 12px 0 5px; }
-.earn { font-size: 12px; color: var(--green2); font-weight: 700; }
-.duration { margin-top: 6px; font-size: 11px; color: var(--muted); }
-.primary, .secondary, .danger {
-  border: 0;
-  border-radius: 10px;
-  padding: 12px;
-  font-weight: 700;
-  width: 100%;
+.panel h3{margin:0 0 14px;font-size:16px}
+.field{margin-bottom:13px}
+.field label{
+  display:block;margin-bottom:7px;font-size:12px;font-weight:700
 }
-.primary { background: var(--green2); color: white; }
-.secondary { background: #e6f2e9; color: var(--green); }
-.danger { background: #fff0ed; color: #a93220; }
-.card .primary { margin-top: 13px; padding: 10px 5px; font-size: 12px; }
-.panel {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 14px;
+.field input{
+  width:100%;padding:13px;border:1px solid #dce5df;
+  border-radius:10px;outline-color:var(--green2);background:white
 }
-.panel h3 { margin: 0 0 14px; font-size: 16px; }
-.field { margin-bottom: 13px; }
-.field label {
-  display: block;
-  margin-bottom: 7px;
-  font-size: 12px;
-  font-weight: 700;
+.small{font-size:11px;color:var(--muted);line-height:1.5}
+.stat-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:10px;margin-bottom:16px
 }
-.field input {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #dce5df;
-  border-radius: 10px;
-  outline-color: var(--green2);
-  background: white;
+.stat{
+  background:white;border:1px solid var(--border);
+  border-radius:13px;padding:14px
 }
-.small { font-size: 11px; color: var(--muted); line-height: 1.5; }
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-bottom: 16px;
+.stat span{font-size:11px;color:var(--muted)}
+.stat strong{display:block;font-size:20px;margin-top:8px}
+.list-row{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;padding:13px 0;border-bottom:1px solid var(--border);
+  font-size:13px
 }
-.stat {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 13px;
-  padding: 14px;
+.list-row:last-child{border-bottom:0}
+.bottom-nav{
+  position:fixed;bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:480px;background:white;
+  border-top:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(4,1fr);
+  padding:9px 4px calc(9px + env(safe-area-inset-bottom));
+  z-index:10
 }
-.stat span { font-size: 11px; color: var(--muted); }
-.stat strong { display: block; font-size: 20px; margin-top: 8px; }
-.list-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding: 13px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
+.nav-item{
+  border:0;background:transparent;color:#7d8981;
+  display:flex;flex-direction:column;align-items:center;
+  gap:5px;font-size:10px
 }
-.list-row:last-child { border-bottom: 0; }
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 480px;
-  background: white;
-  border-top: 1px solid var(--border);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 9px 4px calc(9px + env(safe-area-inset-bottom));
-  z-index: 10;
+.nav-icon{font-size:21px}
+.nav-item.active{color:var(--green2);font-weight:800}
+.auth-wrap{max-width:440px;margin:30px auto;padding:18px}
+.auth-brand{text-align:center;margin:30px 0 24px}
+.auth-brand .logo{margin:auto}
+.auth-brand h1{color:var(--green);font-size:23px}
+.auth-brand p{color:var(--muted);font-size:13px}
+.auth-card{
+  background:white;border-radius:18px;
+  border:1px solid var(--border);padding:20px
 }
-.nav-item {
-  border: 0;
-  background: transparent;
-  color: #7d8981;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  font-size: 10px;
+.auth-tabs{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:8px;margin-bottom:20px
 }
-.nav-item .nav-icon { font-size: 21px; }
-.nav-item.active { color: var(--green2); font-weight: 800; }
-.auth-wrap {
-  max-width: 440px;
-  margin: 30px auto;
-  padding: 18px;
+.auth-tabs button{
+  border:0;border-radius:9px;padding:12px;background:#eef3ef
 }
-.auth-brand { text-align: center; margin: 30px 0 24px; }
-.auth-brand .logo { margin: auto; }
-.auth-brand h1 { color: var(--green); font-size: 23px; }
-.auth-brand p { color: var(--muted); font-size: 13px; }
-.auth-card {
-  background: white;
-  border-radius: 18px;
-  border: 1px solid var(--border);
-  padding: 20px;
+.auth-tabs button.active{background:var(--green);color:white}
+.toast{
+  position:fixed;top:15px;left:50%;transform:translateX(-50%);
+  background:#172b20;color:white;padding:12px 17px;
+  border-radius:10px;z-index:50;width:max-content;
+  max-width:90%;font-size:13px
 }
-.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
-.auth-tabs button { border: 0; border-radius: 9px; padding: 12px; background: #eef3ef; }
-.auth-tabs button.active { background: var(--green); color: white; }
-.toast {
-  position: fixed;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #172b20;
-  color: white;
-  padding: 12px 17px;
-  border-radius: 10px;
-  z-index: 50;
-  width: max-content;
-  max-width: 90%;
-  font-size: 13px;
-}
-footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px; }
+footer{text-align:center;padding:16px;color:var(--muted);font-size:10px}
 </style>
 </head>
 
 <body>
-
 <div id="toast" class="toast hidden"></div>
 
-<!-- LOGIN AND REGISTRATION -->
+<!-- ACCOUNT ACCESS -->
 <section id="authScreen" class="auth-wrap">
   <div class="auth-brand">
     <div class="logo">⛽</div>
@@ -259,14 +179,13 @@ footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px
     <form id="loginForm" onsubmit="login(event)">
       <div class="field">
         <label>Phone Number</label>
-        <input id="loginPhone" type="tel" placeholder="Enter your phone number" required>
+        <input id="loginPhone" type="tel" placeholder="Enter phone number" required>
       </div>
       <div class="field">
         <label>Login Password</label>
         <input id="loginPassword" type="password" placeholder="Enter password" required>
       </div>
       <button class="primary" type="submit">Login</button>
-      <p class="small">This front-end sample stores a local demonstration account on this device. It is not a secure production authentication system.</p>
     </form>
 
     <form id="signupForm" class="hidden" onsubmit="signup(event)">
@@ -276,20 +195,21 @@ footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px
       </div>
       <div class="field">
         <label>Create Login Password</label>
-        <input id="signupPassword" type="password" minlength="9" placeholder="At least 9 characters" required>
+        <input id="signupPassword" type="password" minlength="9"
+          placeholder="At least 9 characters" required>
       </div>
       <div class="field">
         <label>Create Withdrawal Password</label>
-        <input id="withdrawPassword" type="password" minlength="9" placeholder="At least 9 characters" required>
+        <input id="withdrawPassword" type="password" minlength="9"
+          placeholder="At least 9 characters" required>
       </div>
       <button class="primary" type="submit">Create Account</button>
-      <p class="small">Use fictional test details only. Do not enter real banking passwords or sensitive personal information.</p>
     </form>
   </div>
-  <footer>PNG Petroleum Trade · Interface preview</footer>
+  <footer>PNG Petroleum Trade</footer>
 </section>
 
-<!-- MAIN APP -->
+<!-- APPLICATION -->
 <div id="app" class="app hidden">
   <header class="header">
     <div class="brand">
@@ -312,13 +232,9 @@ footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px
 
     <!-- HOME -->
     <section id="homePage" class="page">
-      <div class="notice">
-        <strong>Important:</strong> This is a demonstration interface. Product prices and daily figures below are sample display values, not guaranteed returns or evidence of a real investment. Payments and withdrawals are not connected.
-      </div>
-
       <div class="stat-grid">
         <div class="stat">
-          <span>Demo Account Balance</span>
+          <span>Account Balance</span>
           <strong>K0.00</strong>
         </div>
         <div class="stat">
@@ -329,7 +245,7 @@ footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px
 
       <div class="section-title">
         <h3>Petroleum Products</h3>
-        <span>View products</span>
+        <span>Product list</span>
       </div>
       <div id="homeProducts" class="grid"></div>
     </section>
@@ -340,7 +256,7 @@ footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px
       <div class="panel">
         <div class="product-icon">🤝</div>
         <h3>Invite Your Friends</h3>
-        <p class="small">Share this platform preview with people who want to see the interface. No referral rewards are currently configured.</p>
+        <p class="small">Share the platform link with friends.</p>
         <div class="field">
           <label>Referral Link</label>
           <input id="referralLink" readonly>
@@ -348,23 +264,22 @@ footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px
         <button class="primary" onclick="copyReferral()">Copy Referral Link</button>
       </div>
       <div class="panel">
-        <h3>Referral Information</h3>
+        <h3>Referral Overview</h3>
         <div class="list-row"><span>Invited Members</span><strong>0</strong></div>
         <div class="list-row"><span>Referral Rewards</span><strong>K0.00</strong></div>
-        <p class="small">These are placeholders. No referral tracking or rewards are processed.</p>
       </div>
     </section>
 
     <!-- MY PRODUCTS -->
     <section id="productsPage" class="page hidden">
       <div class="section-title"><h3>My Products</h3></div>
-      <div class="notice">Product selections are saved only in this browser. They do not purchase petroleum, process payments, or generate actual earnings.</div>
       <div id="myProducts"></div>
     </section>
 
-    <!-- PROFILE -->
+    <!-- PROFILE AND WITHDRAWAL -->
     <section id="mePage" class="page hidden">
       <div class="section-title"><h3>My Profile</h3></div>
+
       <div class="panel">
         <div style="display:flex;align-items:center;gap:13px">
           <div class="logo">👤</div>
@@ -379,30 +294,29 @@ footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px
         <h3>Account Overview</h3>
         <div class="list-row"><span>Account Balance</span><strong>K0.00</strong></div>
         <div class="list-row"><span>Selected Products</span><strong id="profileProductCount">0</strong></div>
-        <div class="list-row"><span>Account Type</span><strong>Preview</strong></div>
+        <div class="list-row"><span>Account Type</span><strong>Member</strong></div>
       </div>
 
       <div class="panel">
-        <h3>Withdrawal</h3>
+        <h3>Withdraw Funds</h3>
         <div class="field">
           <label>Amount (Kina)</label>
           <input id="withdrawAmount" type="number" min="10" step="1" placeholder="Minimum K10">
         </div>
         <div class="field">
           <label>BSP Account / Wallet Reference</label>
-          <input id="withdrawReference" type="text" placeholder="Optional test reference">
+          <input id="withdrawReference" type="text" placeholder="Enter reference">
         </div>
         <div class="field">
           <label>Withdrawal Password</label>
           <input id="withdrawCheckPassword" type="password" placeholder="Enter withdrawal password">
         </div>
-        <button class="primary" onclick="requestWithdrawal()">Submit Withdrawal Request</button>
-        <p class="small">Minimum displayed request: K10. This preview cannot send money or submit a real withdrawal.</p>
+        <button class="primary" onclick="requestWithdrawal()">Submit Withdrawal</button>
       </div>
 
       <div class="panel">
-        <h3>Security</h3>
-        <p class="small">For this preview, inactivity for 3 minutes automatically logs you out. A real service needs server-side authentication and secure password handling.</p>
+        <h3>Account Security</h3>
+        <p class="small">Your session automatically ends after 3 minutes of inactivity.</p>
         <button class="danger" onclick="logout()">Logout</button>
       </div>
     </section>
@@ -426,346 +340,273 @@ footer { text-align: center; padding: 16px; color: var(--muted); font-size: 10px
 
 <script>
 const products = [
-  {
-    id: 1,
-    name: "Petrol Basic",
-    type: "Petrol",
-    price: 60,
-    daily: 2,
-    days: 50,
-    icon: "⛽"
-  },
-  {
-    id: 2,
-    name: "Diesel Standard",
-    type: "Diesel",
-    price: 250,
-    daily: 7,
-    days: 70,
-    icon: "🚛"
-  },
-  {
-    id: 3,
-    name: "Kerosene Plus",
-    type: "Kerosene",
-    price: 200,
-    daily: 5,
-    days: 80,
-    icon: "🛢️"
-  },
-  {
-    id: 4,
-    name: "Engine Oil Select",
-    type: "Engine Oil",
-    price: 400,
-    daily: 10,
-    days: 80,
-    icon: "⚙️"
-  },
-  {
-    id: 5,
-    name: "Commercial Diesel",
-    type: "Commercial Fuel",
-    price: 900,
-    daily: 20,
-    days: 90,
-    icon: "🚚"
-  },
-  {
-    id: 6,
-    name: "Industrial Fuel",
-    type: "Industrial Fuel",
-    price: 2400,
-    daily: 60,
-    days: 90,
-    icon: "🏭"
-  }
+  {id:1,name:"Petrol Basic",type:"Petrol",price:60,daily:2,days:50,icon:"⛽"},
+  {id:2,name:"Diesel Standard",type:"Diesel",price:250,daily:7,days:70,icon:"🚛"},
+  {id:3,name:"Kerosene Plus",type:"Kerosene",price:200,daily:5,days:80,icon:"🛢️"},
+  {id:4,name:"Engine Oil Select",type:"Engine Oil",price:400,daily:10,days:80,icon:"⚙️"},
+  {id:5,name:"Commercial Diesel",type:"Commercial Fuel",price:900,daily:20,days:90,icon:"🚚"},
+  {id:6,name:"Industrial Fuel",type:"Industrial Fuel",price:2400,daily:60,days:90,icon:"🏭"}
 ];
 
 let currentPhone = "";
 let sessionTimer = null;
 let selectedProducts = [];
 
-function toast(message) {
-  const el = document.getElementById("toast");
-  el.textContent = message;
+function toast(message){
+  const el=document.getElementById("toast");
+  el.textContent=message;
   el.classList.remove("hidden");
   clearTimeout(el._hideTimer);
-  el._hideTimer = setTimeout(() => el.classList.add("hidden"), 3000);
+  el._hideTimer=setTimeout(()=>el.classList.add("hidden"),3000);
 }
 
-function showAuth(mode) {
-  const isLogin = mode === "login";
-  document.getElementById("loginForm").classList.toggle("hidden", !isLogin);
-  document.getElementById("signupForm").classList.toggle("hidden", isLogin);
-  document.getElementById("loginTab").classList.toggle("active", isLogin);
-  document.getElementById("signupTab").classList.toggle("active", !isLogin);
+function showAuth(mode){
+  const isLogin=mode==="login";
+  document.getElementById("loginForm").classList.toggle("hidden",!isLogin);
+  document.getElementById("signupForm").classList.toggle("hidden",isLogin);
+  document.getElementById("loginTab").classList.toggle("active",isLogin);
+  document.getElementById("signupTab").classList.toggle("active",!isLogin);
 }
 
-function getAccounts() {
-  try {
-    return JSON.parse(localStorage.getItem("pngPetroleumAccounts") || "{}");
-  } catch {
-    return {};
-  }
+function getAccounts(){
+  try{return JSON.parse(localStorage.getItem("pngPetroleumAccounts")||"{}")}
+  catch{return {}}
 }
 
-function signup(event) {
+function signup(event){
   event.preventDefault();
+  const phone=document.getElementById("signupPhone").value.trim();
+  const password=document.getElementById("signupPassword").value;
+  const withdrawalPassword=document.getElementById("withdrawPassword").value;
 
-  const phone = document.getElementById("signupPhone").value.trim();
-  const password = document.getElementById("signupPassword").value;
-  const withdrawalPassword = document.getElementById("withdrawPassword").value;
-
-  if (!phone || password.length < 9 || withdrawalPassword.length < 9) {
-    toast("Please complete all fields. Passwords need at least 9 characters.");
+  if(!phone||password.length<9||withdrawalPassword.length<9){
+    toast("Complete all fields. Passwords need at least 9 characters.");
     return;
   }
 
-  const accounts = getAccounts();
-  if (accounts[phone]) {
-    toast("An account already exists on this device. Please log in.");
+  const accounts=getAccounts();
+  if(accounts[phone]){
+    toast("This account already exists on this device. Please log in.");
     return;
   }
 
-  // Demonstration only. Production apps must never store plain-text passwords.
-  accounts[phone] = { password, withdrawalPassword };
-  localStorage.setItem("pngPetroleumAccounts", JSON.stringify(accounts));
-
-  toast("Demo account created. Please log in.");
-  document.getElementById("loginPhone").value = phone;
+  accounts[phone]={password,withdrawalPassword};
+  localStorage.setItem("pngPetroleumAccounts",JSON.stringify(accounts));
+  document.getElementById("loginPhone").value=phone;
+  document.getElementById("loginPassword").value="";
   showAuth("login");
+  toast("Account created. Please log in.");
 }
 
-function login(event) {
+function login(event){
   event.preventDefault();
+  const phone=document.getElementById("loginPhone").value.trim();
+  const password=document.getElementById("loginPassword").value;
+  const accounts=getAccounts();
 
-  const phone = document.getElementById("loginPhone").value.trim();
-  const password = document.getElementById("loginPassword").value;
-  const accounts = getAccounts();
-
-  if (!accounts[phone] || accounts[phone].password !== password) {
-    toast("Account not found or password incorrect on this device.");
+  if(!accounts[phone]||accounts[phone].password!==password){
+    toast("Account not found or password incorrect.");
     return;
   }
 
-  currentPhone = phone;
-  selectedProducts = getSelectedProducts();
+  currentPhone=phone;
+  selectedProducts=getSelectedProducts();
   openApp();
 }
 
-function openApp() {
+function openApp(){
   document.getElementById("authScreen").classList.add("hidden");
   document.getElementById("app").classList.remove("hidden");
-
-  document.getElementById("welcomePhone").textContent = currentPhone;
-  document.getElementById("profilePhone").textContent = currentPhone;
-
-  document.getElementById("referralLink").value = location.href.split("#")[0] + "?ref=" + encodeURIComponent(currentPhone);
+  document.getElementById("welcomePhone").textContent=currentPhone;
+  document.getElementById("profilePhone").textContent=currentPhone;
+  document.getElementById("referralLink").value=
+    location.href.split("#")[0]+"?ref="+encodeURIComponent(currentPhone);
 
   renderProducts();
   updateCounts();
+  navigate("homePage",document.querySelector('[data-page="homePage"]'));
   resetSessionTimer();
-  navigate("homePage", document.querySelector('[data-page="homePage"]'));
 }
 
-function getSelectedProducts() {
-  try {
-    return JSON.parse(localStorage.getItem("pngPetroleumSelected_" + currentPhone) || "[]");
-  } catch {
-    return [];
-  }
+function getSelectedProducts(){
+  try{
+    return JSON.parse(localStorage.getItem("pngPetroleumSelected_"+currentPhone)||"[]");
+  }catch{return []}
 }
 
-function saveSelectedProducts() {
-  localStorage.setItem("pngPetroleumSelected_" + currentPhone, JSON.stringify(selectedProducts));
+function saveSelectedProducts(){
+  localStorage.setItem("pngPetroleumSelected_"+currentPhone,JSON.stringify(selectedProducts));
 }
 
-function renderProducts() {
-  const home = document.getElementById("homeProducts");
-  home.innerHTML = "";
+function renderProducts(){
+  const home=document.getElementById("homeProducts");
+  home.innerHTML="";
 
-  products.forEach(product => {
-    const card = document.createElement("article");
-    card.className = "card";
-    card.innerHTML = `
+  products.forEach(product=>{
+    const card=document.createElement("article");
+    card.className="card";
+    card.innerHTML=`
       <div class="product-icon">${product.icon}</div>
       <h4>${product.name}</h4>
       <div class="muted">${product.type}</div>
       <div class="price">K${product.price.toLocaleString()}</div>
-      <div class="earn">Displayed daily figure: K${product.daily}</div>
-      <div class="duration">Sample duration: ${product.days} days</div>
-      <button class="primary" onclick="selectProduct(${product.id})">View Product</button>
-    `;
+      <div class="earn">Daily figure: K${product.daily}</div>
+      <div class="duration">${product.days} days</div>
+      <button class="primary" onclick="selectProduct(${product.id})">View Product</button>`;
     home.appendChild(card);
   });
 
   renderMyProducts();
 }
 
-function selectProduct(id) {
-  const product = products.find(item => item.id === id);
-  if (!product) return;
+function selectProduct(id){
+  const product=products.find(item=>item.id===id);
+  if(!product)return;
 
-  if (selectedProducts.includes(id)) {
+  if(selectedProducts.includes(id)){
     toast("This product is already in My Products.");
-    navigate("productsPage", document.querySelector('[data-page="productsPage"]'));
+    navigate("productsPage",document.querySelector('[data-page="productsPage"]'));
     return;
   }
 
-  const ok = confirm(
-    "View/select " + product.name + "?\n\n" +
-    "Displayed price: K" + product.price.toLocaleString() + "\n" +
-    "Sample daily figure: K" + product.daily + "\n\n" +
-    "This is only a preview. No purchase or payment will occur."
-  );
-
-  if (!ok) return;
+  if(!confirm(
+    product.name+"\n\nPrice: K"+product.price.toLocaleString()+
+    "\nDaily figure: K"+product.daily+
+    "\nDuration: "+product.days+" days\n\nAdd this product to your list?"
+  ))return;
 
   selectedProducts.push(id);
   saveSelectedProducts();
   renderMyProducts();
   updateCounts();
-  toast("Product added to your preview list.");
+  toast("Product added to My Products.");
 }
 
-function renderMyProducts() {
-  const holder = document.getElementById("myProducts");
-  holder.innerHTML = "";
+function renderMyProducts(){
+  const holder=document.getElementById("myProducts");
+  holder.innerHTML="";
+  const chosen=products.filter(p=>selectedProducts.includes(p.id));
 
-  const chosen = products.filter(p => selectedProducts.includes(p.id));
-
-  if (!chosen.length) {
-    holder.innerHTML = `
+  if(!chosen.length){
+    holder.innerHTML=`
       <div class="panel">
         <div class="product-icon">🛢️</div>
         <h3>No Products Selected</h3>
-        <p class="small">Go to Home and select a product to display it here.</p>
+        <p class="small">Browse the products on the Home page.</p>
         <button class="primary" onclick="navigate('homePage',document.querySelector('[data-page=homePage]'))">Browse Products</button>
       </div>`;
     return;
   }
 
-  chosen.forEach(product => {
-    const card = document.createElement("div");
-    card.className = "panel";
-    card.innerHTML = `
+  chosen.forEach(product=>{
+    const card=document.createElement("div");
+    card.className="panel";
+    card.innerHTML=`
       <div style="display:flex;gap:12px;align-items:center">
         <div style="font-size:34px">${product.icon}</div>
         <div style="flex:1">
           <strong>${product.name}</strong>
-          <p class="small">Sample price: K${product.price.toLocaleString()}</p>
-          <p class="small">Illustrative daily figure: K${product.daily} · ${product.days} days</p>
+          <p class="small">Price: K${product.price.toLocaleString()}</p>
+          <p class="small">Daily figure: K${product.daily} · ${product.days} days</p>
         </div>
       </div>
-      <button class="secondary" style="margin-top:12px" onclick="removeProduct(${product.id})">Remove from List</button>
-    `;
+      <button class="secondary" style="margin-top:12px" onclick="removeProduct(${product.id})">Remove Product</button>`;
     holder.appendChild(card);
   });
 }
 
-function removeProduct(id) {
-  selectedProducts = selectedProducts.filter(productId => productId !== id);
+function removeProduct(id){
+  selectedProducts=selectedProducts.filter(productId=>productId!==id);
   saveSelectedProducts();
   renderMyProducts();
   updateCounts();
-  toast("Removed from preview list.");
+  toast("Product removed.");
 }
 
-function updateCounts() {
-  document.getElementById("homeProductCount").textContent = selectedProducts.length;
-  document.getElementById("profileProductCount").textContent = selectedProducts.length;
+function updateCounts(){
+  document.getElementById("homeProductCount").textContent=selectedProducts.length;
+  document.getElementById("profileProductCount").textContent=selectedProducts.length;
 }
 
-function navigate(pageId, button) {
-  document.querySelectorAll(".page").forEach(page => page.classList.add("hidden"));
+function navigate(pageId,button){
+  document.querySelectorAll(".page").forEach(page=>page.classList.add("hidden"));
   document.getElementById(pageId).classList.remove("hidden");
-
-  document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("active"));
-  if (button) button.classList.add("active");
-
+  document.querySelectorAll(".nav-item").forEach(item=>item.classList.remove("active"));
+  if(button)button.classList.add("active");
   resetSessionTimer();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({top:0,behavior:"smooth"});
 }
 
-function copyReferral() {
-  const value = document.getElementById("referralLink").value;
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(value)
-      .then(() => toast("Referral link copied."))
-      .catch(() => fallbackCopy(value));
-  } else {
-    fallbackCopy(value);
-  }
-}
-
-function fallbackCopy(value) {
-  const input = document.getElementById("referralLink");
+function copyReferral(){
+  const input=document.getElementById("referralLink");
   input.select();
-  input.setSelectionRange(0, 99999);
-  try {
-    document.execCommand("copy");
-    toast("Link selected/copied if supported by your browser.");
-  } catch {
-    toast("Please copy the link manually.");
+  input.setSelectionRange(0,99999);
+  if(navigator.clipboard&&window.isSecureContext){
+    navigator.clipboard.writeText(input.value)
+      .then(()=>toast("Referral link copied."))
+      .catch(()=>fallbackCopy(input));
+  }else{
+    fallbackCopy(input);
   }
 }
 
-function requestWithdrawal() {
-  const amount = Number(document.getElementById("withdrawAmount").value);
-  const reference = document.getElementById("withdrawReference").value.trim();
-  const password = document.getElementById("withdrawCheckPassword").value;
-  const accounts = getAccounts();
-  const account = accounts[currentPhone];
+function fallbackCopy(input){
+  try{
+    document.execCommand("copy");
+    toast("Referral link copied if supported by your browser.");
+  }catch{
+    toast("Select and copy the referral link manually.");
+  }
+}
 
-  if (!amount || amount < 10) {
-    toast("The displayed minimum request is K10.");
+function requestWithdrawal(){
+  const amount=Number(document.getElementById("withdrawAmount").value);
+  const reference=document.getElementById("withdrawReference").value.trim();
+  const password=document.getElementById("withdrawCheckPassword").value;
+  const account=getAccounts()[currentPhone];
+
+  if(!amount||amount<10){
+    toast("The minimum withdrawal request is K10.");
     return;
   }
-
-  if (!reference) {
-    toast("Enter a test reference to continue.");
+  if(!reference){
+    toast("Enter your account or wallet reference.");
     return;
   }
-
-  if (!account || password !== account.withdrawalPassword) {
+  if(!account||password!==account.withdrawalPassword){
     toast("Withdrawal password does not match.");
     return;
   }
 
-  toast("Preview only: no withdrawal was sent or processed.");
-  document.getElementById("withdrawAmount").value = "";
-  document.getElementById("withdrawReference").value = "";
-  document.getElementById("withdrawCheckPassword").value = "";
+  toast("Withdrawal is not connected to a payment service.");
 }
 
-function resetSessionTimer() {
+function resetSessionTimer(){
   clearTimeout(sessionTimer);
-  sessionTimer = setTimeout(() => {
-    if (currentPhone) {
-      toast("Logged out after 3 minutes of inactivity.");
+  sessionTimer=setTimeout(()=>{
+    if(currentPhone){
       logout();
+      toast("You have been logged out due to inactivity.");
     }
-  }, 180000);
+  },180000);
 }
 
-["click", "keydown", "touchstart", "scroll"].forEach(eventName => {
-  document.addEventListener(eventName, () => {
-    if (currentPhone) resetSessionTimer();
-  }, { passive: true });
+["click","keydown","touchstart","scroll"].forEach(eventName=>{
+  document.addEventListener(eventName,()=>{
+    if(currentPhone)resetSessionTimer();
+  },{passive:true});
 });
 
-function logout() {
+function logout(){
   clearTimeout(sessionTimer);
-  currentPhone = "";
-  selectedProducts = [];
+  currentPhone="";
+  selectedProducts=[];
   document.getElementById("app").classList.add("hidden");
   document.getElementById("authScreen").classList.remove("hidden");
-  document.getElementById("loginPassword").value = "";
-  document.getElementById("withdrawCheckPassword").value = "";
+  document.getElementById("loginPassword").value="";
+  document.getElementById("withdrawCheckPassword").value="";
   showAuth("login");
 }
-
 </script>
 </body>
-  </html>
+</html>
